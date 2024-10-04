@@ -148,9 +148,9 @@ else ifeq ($(platform), xydds)
    CC_AS = /opt/xydds/usr/bin/arm-linux-as
 	fpic := -fPIC
 	SHARED := -shared -Wl,-version-script=link.T -Wl,-no-undefined
-	PLATFORM_DEFINES += -fomit-frame-pointer -ffast-math -marm -mtune=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard
+	PLATFORM_DEFINES += -fomit-frame-pointer -ffast-math -marm -mfpu=neon-vfpv4 -mfloat-abi=hard
 	PLATFORM_DEFINES += -fdata-sections -ffunction-sections
-	PLATFORM_DEFINES += -march=armv7-a
+	PLATFORM_DEFINES += -DARM -mcpu=cortex-a7
 
 # Classic Platforms ####################
 # Platform affix = classic_<ISA>_<µARCH>
